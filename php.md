@@ -1,34 +1,45 @@
-Firstly, we code the project on VScode and on a Windows computer.
+Create a fully extensible PHP project built from scratch using a custom-designed file and folder structure. The project must not rely on any frameworks (e.g., MVC frameworks) but instead use a unique, self-designed architecture that prioritizes simplicity, clarity, and future expansion.
 
-Develop a fully extensible PHP project from scratch using a custom file and folder structure. The project must not rely on any frameworks (such as MVC frameworks); instead, it should use a unique, self-designed architecture that emphasizes simplicity and clarity.
+1. Language & Project Structure
+Programming Language: The project will be entirely written in PHP.
 
-Project Requirements:
+Development Environment: Develop the project using VS Code on a Windows system.
 
-Language & Structure:
+File/Folder Structure:
 
-The project is written in PHP.
+Organize the project with a custom structure, avoiding frameworks or predefined MVC patterns.
 
-Use a simple, custom file/folder structure without any external frameworks or MVC patterns.
+The root folder should contain dedicated folders such as /css, /js, /config, /sql, /logs, etc.
 
-Organize files in a way that promotes easy maintenance and future expansion.
+CSS & JavaScript Files:
 
-Front-End Design & Assets:
+Global CSS and JS assets should be placed in the /css and /js folders.
 
-Integrate professional UI/UX design elements along with modern design libraries.
+Page-specific CSS and JS should reside in their own files named after the page. For example, for login.php, use css/login.css and js/login.js. No inline or embedded CSS/JS code should be present within the PHP files.
 
-All CSS and JavaScript files must be placed in dedicated main folders (e.g., /css and /js).
+2. Front-End Design & Assets
+UI/UX:
 
-Do not embed any CSS or JS code directly within the page files. Instead, create and maintain separate .css and .js files for each page as needed.
+Integrate professional, modern UI/UX design elements.
 
-Ensure the entire design is 100% mobile-responsive.
+Ensure the design is fully mobile-responsive (100% responsive).
 
-Implement a global header and footer that are present on every page. Both header and footer should be sticky.
+Implement a global header and footer that are present on every page and remain sticky as the user scrolls.
 
-For icons, animations, and interactive elements, actively import and use libraries such as jQuery, GraphQL, GSAP, AJAX, and any other libraries deemed necessary.
+Asset Management:
 
-Configuration & System Settings:
+Do not use traditional image formats. For any graphics, icons, or visual elements, generate and use SVG code instead.
 
-Centralize all configuration settings in a single config file. This file should include variables for:
+External Libraries:
+
+Integrate modern JavaScript libraries such as jQuery, GSAP, AJAX, GraphQL, etc., as needed for animations, interactive elements, and dynamic data fetching.
+
+3. Configuration & System Settings
+Centralized Configuration:
+
+Create a single configuration file (e.g., config/config.php) that contains all global settings.
+
+This file should include:
 
 Application details (name, URL, version, etc.)
 
@@ -38,31 +49,56 @@ Database credentials and settings
 
 API keys and other essential configuration parameters
 
-All dynamic references (such as application name or version) must be pulled from this configuration file.
+All dynamic references in the project (like the application name or version) must be pulled from this configuration file.
 
-Advanced Features:
+4. Advanced Features
+Custom Session & Cookie Management:
 
-Implement a custom, advanced logging system that tracks errors and system events.
+Develop a custom session management system with dedicated user session handling.
 
-Build an integrated notification system with push notification support.
+Implement custom cookie management to control authentication, session persistence, and security.
 
-Develop an advanced email system for sending out notifications, alerts, or other communications.
+Logging & Notifications:
 
-Authentication & Social Login:
+Integrate an advanced logging system that tracks errors and system events. All logs should be stored in the /logs folder.
 
-Provide social login functionality, including integration with Google and Facebook authentication.
+Build an integrated notification system with support for push notifications.
 
-Database & SQL Integration:
+Email System:
 
-Use MariaDB as the database system.
+Develop an advanced email system for sending notifications, alerts, and other communications.
 
-Store all SQL scripts in a dedicated folder (e.g., /sql). Any updates to the database should modify these scripts.
+Social Authentication:
 
-Include an installdb.php file that automatically executes the SQL scripts to install or update the entire database. This file should:
+Implement social login functionality, providing integration with Google and Facebook authentication.
 
-Run all necessary SQL scripts to create tables and fields from scratch.
+5. Database & SQL Integration
+Database System: Use MariaDB as the primary database.
 
-Display detailed, console-like output showing the progress and status of the installation process.
+SQL Scripts:
 
-Instructions for Code Generation AI:
-Based on the above requirements, generate a comprehensive PHP project that adheres to these specifications. The solution should include clear separation of concerns, a structured and maintainable file layout, and modular design practices. Ensure all elements (UI/UX, configuration management, advanced logging, social authentication, and database integration) are seamlessly integrated into the final project.
+Store all SQL scripts in a dedicated /sql folder. These scripts will be used for creating and updating database tables.
+
+Automatic Database Installation/Update:
+
+Create an installdb.php script that automatically executes all necessary SQL scripts to install or update the database.
+
+This script should output a detailed, console-like log of the installation process, indicating the progress and status of each executed script.
+
+6. Additional Technical Requirements
+Modular Architecture:
+
+Ensure that all components of the project are modular, facilitating easy maintenance and future expansion.
+
+Separation of Concerns:
+
+All business logic, presentation, and configuration should be clearly separated.
+
+Avoid mixing HTML, CSS, and JavaScript code directly within PHP files. Use external files for styling and interactivity.
+
+Dynamic Content:
+
+Ensure that all dynamic content (e.g., application name, version) is referenced from the centralized configuration file.
+
+Summary:
+Using the above specifications, generate a comprehensive, modular PHP project that is fully extensible and adheres to best practices. The project should include custom session and cookie management, utilize SVGs instead of images, and enforce a strict separation between global and page-specific CSS/JS files (e.g., placing login page styles in css/login.css and its scripts in js/login.js, never embedded in login.php). This approach will ensure that the codebase remains clean, maintainable, and ready for future enhancements.
