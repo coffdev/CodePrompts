@@ -1,41 +1,66 @@
-You are an expert full-stack developer with a keen eye for professional UI/UX design. Your task is to generate a modern, responsive web project using a custom file structure—without relying on any frameworks or MVC patterns. Follow these guidelines carefully:
+Develop a fully extensible PHP project from scratch using a custom file and folder structure. The project must not rely on any frameworks (such as MVC frameworks); instead, it should use a unique, self-designed architecture that emphasizes simplicity and clarity.
 
-File & Folder Structure
+Project Requirements:
 
-Simplicity & Customization:
-Use a simple, custom-designed file and folder organization. Do not use any external frameworks or standard MVC architectures.
+Language & Structure:
 
-Asset Organization:
-Store all main CSS and JavaScript code in dedicated primary directories (e.g., /css and /js).
+The project is written in PHP.
 
-Separation of Concerns:
-Never embed design-related CSS or JS code directly within page files. Instead, for each page, create separate corresponding .css and .js files in the main asset folders.
+Use a simple, custom file/folder structure without any external frameworks or MVC patterns.
 
-Design & Responsiveness
+Organize files in a way that promotes easy maintenance and future expansion.
 
-Professional UI/UX:
-Implement professional UI/UX elements using modern design libraries and techniques.
+Front-End Design & Assets:
 
-Mobile-First & Responsive:
-Ensure that the entire design is 100% mobile-compatible and fully responsive across all devices.
+Integrate professional UI/UX design elements along with modern design libraries.
 
-Global Components:
-Create a global header and footer that appear on every page. Both the header and footer should be “sticky” (i.e., remain fixed during scrolling).
+All CSS and JavaScript files must be placed in dedicated main folders (e.g., /css and /js).
 
-Libraries & Animations
+Do not embed any CSS or JS code directly within the page files. Instead, create and maintain separate .css and .js files for each page as needed.
 
-Library Integration:
-Actively import and utilize all necessary libraries for enhancing design, icons, and animations.
+Ensure the entire design is 100% mobile-responsive.
 
-Examples of Required Libraries:
-Include, but do not limit yourself to, libraries such as jQuery, GraphQL, GSAP, and Ajax. Use any other libraries that may be required to meet modern web standards.
+Implement a global header and footer that are present on every page. Both header and footer should be sticky.
 
-Coding Standards
+For icons, animations, and interactive elements, actively import and use libraries such as jQuery, GraphQL, GSAP, AJAX, and any other libraries deemed necessary.
 
-Clean & Modular Code:
-Maintain clean, modular, and well-documented code throughout the project.
+Configuration & System Settings:
 
-Separation of Logic and Presentation:
-Ensure that the styling and scripting for each page are maintained separately from the HTML structure.
+Centralize all configuration settings in a single config file. This file should include variables for:
 
-Your generated code should strictly adhere to these guidelines, producing a well-organized, visually appealing, and fully responsive web project that is built without any pre-existing frameworks or MVC patterns.
+Application details (name, URL, version, etc.)
+
+SMTP settings for email
+
+Database credentials and settings
+
+API keys and other essential configuration parameters
+
+All dynamic references (such as application name or version) must be pulled from this configuration file.
+
+Advanced Features:
+
+Implement a custom, advanced logging system that tracks errors and system events.
+
+Build an integrated notification system with push notification support.
+
+Develop an advanced email system for sending out notifications, alerts, or other communications.
+
+Authentication & Social Login:
+
+Provide social login functionality, including integration with Google and Facebook authentication.
+
+Database & SQL Integration:
+
+Use MariaDB as the database system.
+
+Store all SQL scripts in a dedicated folder (e.g., /sql). Any updates to the database should modify these scripts.
+
+Include an installdb.php file that automatically executes the SQL scripts to install or update the entire database. This file should:
+
+Run all necessary SQL scripts to create tables and fields from scratch.
+
+Display detailed, console-like output showing the progress and status of the installation process.
+
+Instructions for Code Generation AI:
+Based on the above requirements, generate a comprehensive PHP project that adheres to these specifications. The solution should include clear separation of concerns, a structured and maintainable file layout, and modular design practices. Ensure all elements (UI/UX, configuration management, advanced logging, social authentication, and database integration) are seamlessly integrated into the final project.
