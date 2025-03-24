@@ -1,3 +1,5 @@
+Firstly, we code the project on VScode and on a Windows computer.
+
 Develop a fully extensible PHP project from scratch using a custom file and folder structure. The project must not rely on any frameworks (such as MVC frameworks); instead, it should use a unique, self-designed architecture that emphasizes simplicity and clarity.
 
 Project Requirements:
